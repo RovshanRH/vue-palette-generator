@@ -5,17 +5,17 @@ import AnalyzerView from '@/views/AnalyzerView.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/vue-palette-generator/',
     name: 'Generator',
     component: GeneratorView
   },
   {
-    path: '/library',
+    path: '/vue-palette-generator/library',
     name: 'Library',
     component: LibraryView
   },
   {
-    path: '/analyzer',
+    path: '/vue-palette-generator/analyzer',
     name: 'Analyzer',
     component: AnalyzerView
   }

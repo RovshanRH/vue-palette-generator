@@ -1,6 +1,6 @@
 <template>
   <div class="library-view">
-    <h1>📚 Библиотека палитр</h1>
+    <h1>Библиотека палитр</h1>
     <SavedPalettes />
   </div>
 </template>

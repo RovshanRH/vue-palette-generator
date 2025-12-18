@@ -114,10 +114,15 @@ const toggleLock = (index: number) => {
 
 const saveCurrent = () => {
   if (colors.value.length === 0) return
+
+  const name = prompt('Введите название палитры:', `Палитра ${new Date().toLocaleString('ru-RU')}`)
+
+  if (!name) return;
+
   
   const palette: Palette = {
     id: Date.now().toString(),
-    name: `Палитра ${new Date().toLocaleString('ru-RU')}`,
+    name: name,
     colors: colors.value,
     tags: [paletteType.value],
     createdAt: new Date().toISOString(),
@@ -158,6 +163,8 @@ watch(colors, (newColors) => {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 180px;
+  flex: 1;
 }
 
 .control-group label {
@@ -188,6 +195,8 @@ watch(colors, (newColors) => {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
+  height: fit-content;
+  align-self: flex-end;
 }
 
 .generate-btn {
@@ -210,10 +219,39 @@ watch(colors, (newColors) => {
 
 .palette-display {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   min-height: 200px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  justify-content: center;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+  .palette-display {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+  
+  .control-group {
+    min-width: 100%;
+  }
+  
+  .generate-btn,
+  .save-btn {
+    align-self: stretch;
+    width: 100%;
+  }
+  
+  .palette-display {
+    justify-content: center;
+  }
 }
 </style>

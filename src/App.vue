@@ -1,21 +1,17 @@
 <template>
   <div id="app">
     <header class="app-header">
-      <h1>🎨 Генератор цветовых палитр</h1>
+      <h1>Генератор цветовых палитр</h1>
       <nav class="main-nav">
-        <router-link to="/" class="nav-link">Генератор</router-link>
-        <router-link to="/library" class="nav-link">Библиотека</router-link>
-        <router-link to="/analyzer" class="nav-link">Анализ</router-link>
+        <router-link to="/vue-palette-generator/" class="nav-link">Генератор</router-link>
+        <router-link to="/vue-palette-generator/library" class="nav-link">Библиотека</router-link>
+        <router-link to="/vue-palette-generator/analyzer" class="nav-link">Анализ</router-link>
       </nav>
     </header>
 
     <main class="main-content">
       <router-view />
     </main>
-
-    <footer class="app-footer">
-      <p>Vue 3 + TypeScript • Генератор цветовых палитр</p>
-    </footer>
   </div>
 </template>
 

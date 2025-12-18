@@ -1,7 +1,7 @@
 <template>
   <div class="generator-view">
     <div class="header">
-      <h1>🎨 Генератор палитр</h1>
+      <h1>Генератор палитр</h1>
       <ColorFormatToggle v-model="format" />
     </div>
 

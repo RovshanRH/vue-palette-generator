@@ -1,11 +1,13 @@
+[file name]: AnalyzerView.vue
+[file content begin]
 <template>
   <div class="analyzer-view">
-    <h1>🔍 Анализ доступности</h1>
+    <h1>Анализ доступности</h1>
 
     <div class="color-selector">
       <h3>Выберите цвета для анализа</h3>
       <div class="color-inputs">
-        <div v-for="(color, index) in colors" :key="index" class="color-input-group">
+        <div v-for="(colorValue, index) in colors" :key="index" class="color-input-group">
           <input
             type="color"
             v-model="colors[index]"
@@ -144,3 +146,4 @@ const removeColor = (index: number) => {
   gap: 20px;
 }
 </style>
+[file content end]
